@@ -1,13 +1,7 @@
 #!/usr/bin/env python
 
-try:
-    from setuptools import setup, find_packages
-    from setuptools.command.test import test
-except ImportError:
-    from ez_setup import use_setuptools
-    use_setuptools()
-    from setuptools import setup, find_packages
-    from setuptools.command.test import test
+from setuptools import setup, find_packages
+from setuptools.command.test import test
 
 
 class mytest(test):
@@ -17,7 +11,7 @@ class mytest(test):
 
 setup(
     name='nexus',
-    version='0.2.0',
+    version='0.2.1',
     author='David Cramer',
     author_email='dcramer@gmail.com',
     url='http://github.com/dcramer/nexus',
